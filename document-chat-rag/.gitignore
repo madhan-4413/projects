@@ -22,3 +22,7 @@ env/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Excluded PDF documents
+AI_Feature_Suggestions_Roadmap.pdf
+changeslog.pdf
