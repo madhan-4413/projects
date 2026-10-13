@@ -103,7 +103,7 @@ def build():
 
     story.append(Paragraph("📋  Project Changelog — Document Chat RAG", title_s))
     story.append(Paragraph(
-        "Prepared on: 08 October 2026  •  Project: document-chat-rag  •  Repo: github.com/madhan-4413/projects",
+        "Prepared on: 12 October 2026  •  Project: document-chat-rag  •  Repo: github.com/madhan-4413/projects",
         sub_s
     ))
     story.append(HRFlowable(width="100%", thickness=1.5, color=ACCENT, spaceBefore=0, spaceAfter=12))
@@ -119,6 +119,7 @@ def build():
         [Paragraph("RAG Logic Fix",   body_s),  Paragraph("Added smart query router: full-doc summarization vs. chunk-based Q&A.", body_s)],
         [Paragraph("GitHub Sync",     body_s),  Paragraph("Staged, committed, and pushed all changes to madhan-4413/projects on GitHub.", body_s)],
         [Paragraph("PDF Report",      body_s),  Paragraph("Generated AI_Feature_Suggestions_Roadmap.pdf with 5 categories and roadmap table.", body_s)],
+        [Paragraph("Reverification & Push", body_s), Paragraph("Audited code/keys, overhauled README.md, excluded PDFs in .gitignore, rebased & pushed to GitHub.", body_s)],
     ]
     ov_t = Table(ov_data, colWidths=[130, 402])
     ov_t.setStyle(TableStyle([
@@ -464,18 +465,51 @@ def build():
     ]))
     story.append(Spacer(1, 8))
 
+    # ════════════════════════════════════════════════════════════════════════════
+    # CHANGE 10 — Reverification, README Overhaul & Git Push (Oct 12, 2026)
+    # ════════════════════════════════════════════════════════════════════════════
+    story.append(section_header("10", "Code & Key Re-verification, README Overhaul & Git Push"))
+    story.append(bullet_block([
+        (
+            "Codebase & API Keys Re-verified",
+            "Audited app.py verifying Google Gemini 2.5 Flash model initialization, dense BAAI/bge-large-en-v1.5 "
+            "embeddings, and robust dual-key environment fallback supporting both GOOGLE_API_KEY and GEMINI_API_KEY.",
+            "Ensures production readiness, proper API loading from .env, and clean UI warning popups if keys are missing."
+        ),
+        (
+            "README.md Fully Overhauled",
+            "Updated README.md to eliminate legacy Ollama references. Added detailed dual-mode RAG architectural "
+            "flowchart in Mermaid, complete tech stack matrix, environment variable setup, and step-by-step launch instructions.",
+            "Aligns project documentation with the actual Gemini 2.5 Flash implementation and user onboarding workflow."
+        ),
+        (
+            "PDF Exclusions in .gitignore & Git Untracking",
+            "Added AI_Feature_Suggestions_Roadmap.pdf and changeslog.pdf to .gitignore. Untracked AI_Feature_Suggestions_Roadmap.pdf "
+            "from the Git index while keeping local files intact on disk.",
+            "Prevents generated binaries and roadmap assets from cluttering the remote source code repository."
+        ),
+        (
+            "Rebase & Push to GitHub (madhan-4413/projects)",
+            "Performed git pull --rebase origin main to seamlessly sync with remote changes, committed document-chat-rag "
+            "updates (commit 6ca752c), and pushed directly to origin/main.",
+            "Ensures clean linear Git history and keeps GitHub repository fully synchronized."
+        ),
+    ]))
+    story.append(Spacer(1, 8))
+
     # ── Summary table ─────────────────────────────────────────────────────────
     story.append(Paragraph("Files Changed — Complete Reference", h2_s))
     files_data = [
         [Paragraph("<b>File</b>", body_s), Paragraph("<b>Action</b>", body_s), Paragraph("<b>Reason</b>", body_s)],
         [Paragraph("app.py", body_s),                         Paragraph("Modified", body_s), Paragraph("Gemini LLM, .env loading, full-doc summarization router", body_s)],
         [Paragraph("requirements.txt", body_s),               Paragraph("Modified", body_s), Paragraph("Added gemini, dotenv, google-generativeai packages", body_s)],
-        [Paragraph("README.md", body_s),                      Paragraph("Rewritten", body_s),Paragraph("Complete rewrite with architecture, tech stack, roadmap", body_s)],
+        [Paragraph("README.md", body_s),                      Paragraph("Rewritten", body_s),Paragraph("Complete overhaul reflecting Gemini 2.5 Flash, dual-mode RAG flowchart, and setup", body_s)],
         [Paragraph("SETUP.md", body_s),                       Paragraph("Rewritten", body_s),Paragraph("Updated for Gemini API key setup instead of Ollama", body_s)],
         [Paragraph(".env", body_s),                           Paragraph("Created",  body_s), Paragraph("Stores GOOGLE_API_KEY securely outside source code", body_s)],
         [Paragraph(".env.example", body_s),                   Paragraph("Created",  body_s), Paragraph("Public template showing required env variable names", body_s)],
-        [Paragraph(".gitignore", body_s),                     Paragraph("Created",  body_s), Paragraph("Prevents .env, __pycache__, venv from being committed", body_s)],
-        [Paragraph("AI_Feature_Suggestions_Roadmap.pdf",body_s),Paragraph("Created",body_s),Paragraph("PDF report of all recommended AI features and roadmap", body_s)],
+        [Paragraph(".gitignore", body_s),                     Paragraph("Modified", body_s), Paragraph("Added exclusions for .env, AI_Feature_Suggestions_Roadmap.pdf, changeslog.pdf", body_s)],
+        [Paragraph("AI_Feature_Suggestions_Roadmap.pdf",body_s),Paragraph("Untracked",body_s),Paragraph("Removed from Git index while preserving file locally on disk", body_s)],
+        [Paragraph("changeslog.pdf", body_s),                 Paragraph("Generated",body_s), Paragraph("Comprehensive session changelog documenting all 10 changes", body_s)],
         [Paragraph(".agents/skills/.../SKILL.md", body_s),   Paragraph("Created",  body_s), Paragraph("Skill metadata & instructions for PDF changelog generation", body_s)],
         [Paragraph(".agents/skills/.../generate_changelog.py", body_s), Paragraph("Created", body_s), Paragraph("Executable python script for skill execution", body_s)],
         [Paragraph("docs/dspy.pdf", body_s),                  Paragraph("Deleted",  body_s), Paragraph("Irrelevant sample PDF — not part of this project", body_s)],

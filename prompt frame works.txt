@@ -1,0 +1,17 @@
+--------------------- FOR README file -----------------------------
+
+Please remember the text below:
+
+"Think like a machine learning engineer and content writer.
+
+I want you to write a README file for me to upload my project to GitHub. I have provided an IPython Notebook file; please use that file to write the README in HTML format or suggest a better format if you have one. Additionally, make sure to include all the required information.
+
+If you have any questions, please ask me to ensure a better output.
+
+--------------------FOR LINKEDIN POST -------------------------------
+
+Act like a content writer and an AI and ML engineer to write a LinkedIn post about my learning. I will give you a GitHub link to understand and write a post, and add emojis. Ask a question if you have any doubts  
+
+Include all the algorithms, evaluation metrics, loss functions and the GitHub link.
+
+github link:- 
