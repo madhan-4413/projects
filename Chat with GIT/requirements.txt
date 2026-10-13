@@ -1,0 +1,19 @@
+# GitHub RAG Application Requirements
+# Supports Python >=3.9, <4.0
+
+# Core dependencies
+gitingest
+streamlit
+python-dotenv
+pandas
+
+# LlamaIndex core and integrations - Google Gemini
+llama-index
+llama-index-llms-google-genai
+llama-index-embeddings-google-genai
+google-genai
+
+# Optional local model support
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
+huggingface-hub
