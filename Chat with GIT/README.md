@@ -184,21 +184,6 @@ streamlit run app_local.py
 
 ---
 
-## 🙏 Acknowledgements
-
-| Who / What | Contribution |
-|-----------|-------------|
-| [**Patchy631 / ai-engineering-hub**](https://github.com/patchy631/ai-engineering-hub) | Original project inspiration and base repository (`github-rag`) |
-| [**Google Gemini**](https://ai.google.dev/) | Large Language Model and Embedding APIs powering the RAG pipeline |
-| [**LlamaIndex**](https://www.llamaindex.ai/) | RAG orchestration framework — indexing, retrieval, and query engine |
-| [**GitIngest**](https://github.com/cyclotruc/gitingest) | GitHub repository-to-Markdown ingestion library |
-| [**Streamlit**](https://streamlit.io/) | Python-first web UI framework for the chat interface |
-| [**Ollama**](https://ollama.com/) | Local LLM runtime used in the alternative `app_local.py` |
-| [**HuggingFace**](https://huggingface.co/) | Open-source embedding models for the local variant |
-| [**python-dotenv**](https://pypi.org/project/python-dotenv/) | Secure environment variable management |
-
----
-
 ## 📄 License
 
 This project is provided for educational and personal use.
@@ -206,5 +191,5 @@ This project is provided for educational and personal use.
 ---
 
 <p align="center">
-  <b>Built with ❤️ using Google Gemini, LlamaIndex & Streamlit</b>
+  <b>Built with ❤️ and learn fast for future </b>
 </p>
