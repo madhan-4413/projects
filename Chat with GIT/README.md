@@ -78,20 +78,19 @@ sequenceDiagram
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-```
+```text
 Chat with GIT/
-├── app.py              # Main Streamlit app (Google Gemini)
-├── app_local.py        # Alternative app using local Ollama LLM
-├── requirements.txt    # Python dependencies
-├── .env                # API key (git-ignored)
-├── .env.example        # Template for .env setup
-├── .gitignore          # Files excluded from version control
-├── explanation.pdf     # Detailed project explanation document
-├── run_app.bat         # Windows batch launcher
-├── run_app.ps1         # PowerShell launcher
-└── README.md           # This file
+├── app.py              # Main Streamlit application with Google Gemini RAG pipeline
+├── app_local.py        # Offline/local app variant (Ollama llama3.2 + HuggingFace embeddings)
+├── requirements.txt    # Python package dependencies (Streamlit, LlamaIndex, Google GenAI, etc.)
+├── .env.example        # Template for required environment variables (GOOGLE_API_KEY)
+├── .gitignore          # Git exclusion rules (secrets, caches, and temporary files)
+├── explanation.pdf     # In-depth architectural flowcharts & technical documentation
+├── run_app.bat         # Windows Command Prompt one-click startup script
+├── run_app.ps1         # Windows PowerShell one-click startup script
+└── README.md           # Comprehensive project documentation
 ```
 
 ---
@@ -177,7 +176,15 @@ streamlit run app_local.py
 
 ---
 
-## 🙏 Credits & Acknowledgements
+## 👤 Author
+
+**Madan Sai Jogi**
+* GitHub: [@madhan-4413](https://github.com/madhan-4413)
+* LinkedIn: [madhan-sai-8b1a29341](https://www.linkedin.com/in/madhan-sai-8b1a29341/)
+
+---
+
+## 🙏 Acknowledgements
 
 | Who / What | Contribution |
 |-----------|-------------|
